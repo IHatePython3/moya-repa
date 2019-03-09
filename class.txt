@@ -1,0 +1,104 @@
+#include<pch.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include<vector>
+#include <cctype>
+#include<windows.h>
+
+using namespace std;
+class Worker
+{
+private:
+	float salary;
+	float money;
+	string name;
+	string company;
+public:
+	Worker()
+	{
+		salary = 300;
+		money = 0;
+		name = "Serega Rabotyaga";
+		company = "Metallurgi4eskiy zavod";
+	}
+	Worker(float s, float m, string n, string c)
+	{
+		salary = s;
+		money = m;
+		name = n;
+		company = c;
+
+	}
+
+
+	void Show()
+	{
+		
+
+	}
+	int GetSalary()
+	{
+		return salary;
+	}
+	int GetMoney()
+	{
+		return money;
+	}
+	string GetName()
+	{
+		return name;
+	}
+	string GetCompany()
+	{
+		return company;
+	}
+	void SetSalary(float s)
+	{
+		if (s > 0)
+		{
+			salary = s;
+
+		}
+		else
+		{
+			cout << "Obshibka" << endl;
+		}
+    }
+	void GoblinsGreed(float s)
+	{
+		money += salary;
+	}
+
+	
+	
+
+};
+
+
+void main()
+{
+	Worker Gaben;
+	Gaben.Show();
+	
+	vector<Worker> wk;
+	for (int i = 0; i < 3; i++)
+	{
+		int s;
+		cin >> s;
+		int m;
+		cin >> m;
+		string nam;
+		cin >> nam;
+		string com;
+		cin >> com;
+		Worker Gaben = Worker(s, m, nam, com);wk.push_back(Gaben);
+	}
+
+
+
+
+
+
+	system("pause");
+}
